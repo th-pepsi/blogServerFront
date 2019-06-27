@@ -25,7 +25,7 @@ export default {
     blogList() {
       var that = this;
       this.$axios
-        .post("http://127.0.0.1:3000/user/login", {
+        .post("http://127.0.0.1:3000/api/user/login", {
           params: {
             username: that.username,
             password: that.password
@@ -33,6 +33,9 @@ export default {
         })
         .then(res => {
           console.log(res);
+          if(res.data.error == '0'){
+            that.$router.push('/blogList')
+          }
         });
     }
   }

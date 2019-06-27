@@ -70,7 +70,7 @@ export default {
       console.log(id,index);
       let that = this;
       this.$axios
-        .post("http://127.0.0.1:3000/deleteBlog", {
+        .post("http://127.0.0.1:3000/api/blog/deleteBlog", {
           params: {
             id:id
           }
@@ -89,7 +89,7 @@ export default {
     getList() {
       let that = this;
       this.$axios
-        .get("http://127.0.0.1:3000/list", {
+        .get("http://127.0.0.1:8000/api/blog/list", {
           params: {
             author:'pepsi'
           }

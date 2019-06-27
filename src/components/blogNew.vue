@@ -31,7 +31,7 @@ export default {
       if (this.$route.query.id) {
         //修改博客
          this.$axios
-          .post("http://127.0.0.1:3000/modifyBlog", {
+          .post("http://127.0.0.1:3000/api/blog/modifyBlog", {
             params: {
               id:that.$route.query.id,
               title: that.blogname,
@@ -48,7 +48,7 @@ export default {
       } else {
         //新建博客
         this.$axios
-          .post("http://127.0.0.1:3000/newBlog", {
+          .post("http://127.0.0.1:3000/api/blog/newBlog", {
             params: {
               author: "pepsi",
               title: that.blogname,
@@ -67,7 +67,7 @@ export default {
     getDetail(id) {
       let that = this;
       this.$axios
-        .get("http://127.0.0.1:3000/detail", {
+        .get("http://127.0.0.1:3000/api/blog/detail", {
           params: {
             id: id
           }

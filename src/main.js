@@ -6,8 +6,8 @@ import ElementUI from 'element-ui';
 import router from './router';
 import axios from 'axios'
 
-
-Vue.prototype.$axios= axios
+axios.defaults.withCredentials = true;
+Vue.prototype.$axios= axios;
 Vue.config.productionTip = false
 Vue.use(ElementUI);
 
